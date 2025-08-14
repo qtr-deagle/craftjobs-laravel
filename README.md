@@ -1,3 +1,7 @@
+## 🎥 Demo Video
+
+👉 [Watch the CraftJobs demo](https://vimeo.com/1110112118)
+
 # CraftJobs 💼
 
 CraftJobs is a Laravel 12.20.0-based **job board and blog platform**, built as part of a BSIT college project. It combines clean architecture, dynamic layouts, and strong security practices to deliver a modern, safe job listing experience.
