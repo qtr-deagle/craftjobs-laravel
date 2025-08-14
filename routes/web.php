@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ListingController;
+use App\Http\Controllers\Auth\GoogleController;
 
 // Common Resource Routes:
 // index - Show all listings
@@ -53,3 +54,9 @@ Route::get('/login', [UserController::class, 'login'])->name('login')->middlewar
 
 // Log user in
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
+
+// Google OAuth Routes
+Route::get('/auth/google', [GoogleController::class, 'redirect'])->name('auth.google');
+
+// Handle Google Callback
+Route::get('/auth/google/callback', [GoogleController::class, 'callback']);

@@ -34,20 +34,28 @@
         <ul class="flex space-x-6 mr-6 text-lg">
             @auth
                 <li>
-                    <span class="font-bold uppercase">
-                        Welcome {{ auth()->user() ? auth()->user()->name : 'Guest' }}</span>
+                    <span
+                        class="inline-flex items-center gap-2 mt-4 px-5 py-2 bg-blue-600 text-white rounded-full shadow-md hover:shadow-lg transition duration-300 text-sm sm:text-base font-bold tracking-wide uppercase animate-fade-in">
+                        <i class="fa-solid fa-hand-wave text-white animate-bounce-slow"></i>
+                        Welcome {{ auth()->user() ? auth()->user()->name : 'Guest' }}
                     </span>
                 </li>
                 <li>
-                    <a href="/listings/manage" class="text-craftjobs">
-                        <i class="fa-solid fa-gear"></i> Manage Listings
+                    <a href="/listings/manage"
+                        class="text-white mt-4 bg-black hover:bg-white hover:text-black py-2 px-5 border-2 border-black rounded-full shadow-md hover:shadow-lg transition duration-300 inline-flex items-center group">
+                        <i class="fa-solid fa-gear text-white group-hover:text-black transition duration-300"></i>
+                        <span class="ml-2 font-bold">Manage Listings</span>
                     </a>
                 </li>
                 <li>
                     <form class="inline" method="POST" action="/logout">
                         @csrf
-                        <button type="submit" class="text-craftjobs">
-                            <i class="fa-solid fa-door-closed"></i> Logout
+                        <button type="submit"
+                            class="text-white mt-4 bg-black hover:bg-white hover:text-black py-2 px-5 border-2 border-black rounded-full shadow-md hover:shadow-lg transition duration-300 group">
+                            <i class="fa-solid fa-door-closed text-white group-hover:hidden transition duration-300"></i>
+                            <i
+                                class="fa-solid fa-door-open hidden group-hover:inline text-black transition duration-300"></i>
+                            <span class="ml-2 font-bold">Logout</span>
                         </button>
                     </form>
                 </li>
