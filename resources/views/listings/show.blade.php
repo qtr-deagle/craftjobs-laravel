@@ -4,8 +4,7 @@
     <a href="/" class="inline-block ml-4 mb-4">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-900 hover:bg-gray-500 transition">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                <line x1="6" y1="18" x2="18" y2="6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <path stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
             </svg>
         </span>
     </a>
@@ -35,7 +34,7 @@
 
                 {{-- Description --}}
                 <div class="w-full text-left">
-                    <h3 class="text-2xl font-bold text-blue-700 mb-4">Job Description</h3>
+                    <h3 class="text-4xl font-bold text-blue-700 mb-6">Job Description</h3>
                     <div class="text-gray-700 text-base space-y-6 leading-relaxed">
                         {!! nl2br(e($listing->description)) !!}
                     </div>
